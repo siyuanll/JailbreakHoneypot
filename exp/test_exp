@@ -1,0 +1,19 @@
+from evaluate_policy import PolicyEvaluator
+
+# 配置API密钥和其他参数
+api = "your_api_key_here"  # API 密钥或其他配置
+evaluator = PolicyEvaluator(policy='OpenAI', api=api, mp=4)  # 使用4个线程进行并行
+
+# 输入的 QApairs (目标，模型回答) 列表
+QApairs = [
+    ("Goal 1", "Model Response 1"),
+    ("Goal 2", "Model Response 2"),
+    ("Goal 3", "Model Response 3")
+]
+
+# 调用 evaluate 方法
+scores, reasons = evaluator.evaluate(QApairs)
+
+# 输出评分和分析
+print("Scores:", scores)
+print("Reasons:", reasons)

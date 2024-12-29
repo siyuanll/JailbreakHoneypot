@@ -1,0 +1,1 @@
+Namespace(config='agentverse/tasks/llm_eval/config.yaml', reverse_input=False)
